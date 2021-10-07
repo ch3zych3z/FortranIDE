@@ -11,5 +11,11 @@ class MainView : View("FortranIDE") {
 
 
     override val root = borderpane {
+        top = TopMenu().setupMenuBar()
+        left = ProjectMenu().setupProjectMenu()
+        center = vbox {
+            EditorView().setupEditorView()
+            ConsoleView().setupConsoleView()
+        }
     }
 }
