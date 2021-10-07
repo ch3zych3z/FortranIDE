@@ -14,8 +14,8 @@ class MainView : View("FortranIDE") {
         top = TopMenu().setupMenuBar()
         left = ProjectMenu().setupProjectMenu()
         center = vbox {
-            EditorView().setupEditorView()
-            ConsoleView().setupConsoleView()
+            //EditorView().setupEditorView()
+            add(ConsoleView().setupConsoleView())
         }
     }
 }
